@@ -15,6 +15,7 @@
 class ModbusIP : public Modbus {
     private:
         byte _MBAP[7];
+        void handle(int raw_len, WiFiClient client);
     public:
         ModbusIP();
         void config(const char* ssid, const char* password);
